@@ -3,18 +3,29 @@
 @tailwind utilities;
 
 .hero-section {
-  @apply w-full max-w-xl mx-auto h-fit py-2 justify-start flex flex-col text-black;
+  @apply w-full max-w-7xl mx-auto px-4 h-fit py-2 flex flex-wrap items-center justify-center text-black gap-4 sm:gap-20;
 }
 
 .hero-section h1 {
   @apply text-6xl font-bold;
 }
 
+.btn {
+  @apply items-center justify-center flex text-center w-full px-14 py-4 sm:w-fit rounded-md font-semibold transition-all duration-300 ease-in-out text-lg;
+}
+
 .btn-red {
-  @apply px-14 py-4 w-fit shadow-md border-2 rounded-md font-semibold  shadow-red-500 text-lg bg-red-600 border-red-600 text-white hover:bg-red-700 hover:border-red-700 transition-all duration-300 ease-in-out;
+  @apply btn shadow-md border-2 rounded-md shadow-zinc-600 bg-red-600 border-red-600 text-white hover:bg-red-700 hover:border-red-700;
 }
 
 .btn-white {
-    @apply px-14 py-4 w-fit shadow-md rounded-md font-semibold text-lg text-black hover:bg-gray-200 hover:bg-opacity-10 hover:shadow-red-600 transition-all duration-300 ease-in-out;
-  }
-  
+  @apply btn shadow-md text-black hover:bg-gray-200 hover:bg-opacity-10 hover:shadow-zinc-600;
+}
+
+.text-hover {
+  @apply hover:text-red-600;
+}
+
+input {
+  @apply border-b-2 border-zinc-300 hover:border-zinc-600 w-full my-2 pb-1 text-lg focus:outline-none focus:border-red-600;
+}

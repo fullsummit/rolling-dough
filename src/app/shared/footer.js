@@ -14,24 +14,23 @@ export default function Footer() {
         </div>
         <hr className="w-1/3 border-zinc-700 flex my-4 lg:hidden" />
         <div className="w-fit flex justify-start flex-col items-start gap-2">
-          <h3 className="text-sm">Follow Us</h3>
+          <h3 className="text-base">Follow Us</h3>
           <div className="flex gap-4">
             <Link href="#">
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon icon={faInstagram} className="text-hover" />
             </Link>
             <Link href="#">
-              <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon icon={faFacebook} className="text-hover" />
             </Link>
             <Link href="#">
-              <FontAwesomeIcon icon={faX} />
+              <FontAwesomeIcon icon={faX} className="text-hover" />
             </Link>
           </div>
         </div>
         <hr className="w-1/3 border-zinc-700 flex my-4 lg:hidden" />
-        {/* Policies and Copyright */}
         <div className="flex flex-col text-center items-center md:items-end mt-4 md:mt-0">
           <p className="mb-2 font-normal text-sm text-center">
-            &copy; {new Date().getFullYear()} Rolling Dough. This site is a demo
+            &copy; {new Date().getFullYear()} Full Summit LLC. This site is a demo. 
           </p>
         </div>
       </div>
