@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
-import { addToCart, removeFromCart } from "../shared/cart/cart-total";
+import Link from "next/link";
 
 export default function Menu() {
   return (
     <div className="flex flex-col gap-4 w-full max-w-7xl mx-auto p-4 items-center justify-center">
       <h1 className="text-4xl font-bold">Menu</h1>
-      <p className="text-2xl font-light">Check out our menu.</p>
+      <p className="text-2xl font-light">Check out our menu. <Link className="text-red-600 font-semibold" href={'/login'}>Sign in</Link>{" "}or{" "}<Link className="text-red-600 font-semibold" href={"/login"}>Sign up</Link> to order.</p>
       <div className="flex flex-col sm:flex-row gap-2 w-full">
         <MenuCategory
           title="Pizza"
@@ -67,14 +66,6 @@ function MenuCategory({ title, items }) {
 }
 
 function MenuItem({ name, price, description }) {
-  const [quantity, setQuantity] = useState(0);
-
-  useEffect(() => {
-    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    const item = cartItems.find((item) => item.name === name.toLowerCase());
-    setQuantity(item?.quantity || 0);
-  }, [addToCart, removeFromCart]);
-
   return (
     <div className="flex gap-2 w-full max-w-sm mx-auto items-center justify-center rounded-md">
       <img
@@ -86,25 +77,6 @@ function MenuItem({ name, price, description }) {
         <h3 className="text-xl font-bold">{name}</h3>
         <p className="text-base font-light">{description}</p>
         <p className="text-base font-light">{price}</p>
-        <div className="flex items-center justify-start gap-4">
-          {quantity > 0 && (
-            <button
-              aria-label="remove from cart"
-              className="h-4 w-4 flex items-center justify-center rounded-full bg-red-600 text-white"
-              onClick={() => removeFromCart(name.toLowerCase(), price)}
-            >
-              -
-            </button>
-          )}
-          <span>{quantity}</span>
-          <button
-            aria-label="add to cart"
-            className="h-4 w-4 flex items-center justify-center rounded-full bg-red-600 text-white"
-            onClick={() => addToCart(name.toLowerCase(), price)}
-          >
-            +
-          </button>
-        </div>
       </div>
     </div>
   );
