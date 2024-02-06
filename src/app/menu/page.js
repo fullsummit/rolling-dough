@@ -14,16 +14,22 @@ export default function Menu() {
               name: "Margherita",
               price: 9.99,
               description: "A traditional margherita pizza.",
+              imageSrc: "/margherita-pizza.jpg",
+              imageAlt: "A margherita pizza.",
             },
             {
               name: "Pepperoni",
               price: 11.99,
               description: "A classic pepperoni pizza.",
+              imageSrc: "/pepperoni-pizza.jpg",
+              imageAlt: "A pepperoni pizza.",
             },
             {
               name: "Supreme",
               price: 13.99,
               description: "A classic supreme pizza.",
+              imageSrc: "/supreme-pizza.jpg",
+              imageAlt: "A supreme pizza with pepperoni, sausage, and peppers.",
             },
           ]}
         />
@@ -34,16 +40,22 @@ export default function Menu() {
               name: "Alfredo",
               price: 9.99,
               description: "A traditional Alfredo.",
+              imageSrc: "/alfredo-pasta.jpg",
+              imageAlt: "A plate of alfredo pasta.",
             },
             {
               name: "Carbonara",
               price: 11.99,
               description: "A classic carbonary.",
+              imageSrc: "/carbonara-pasta.jpg",
+              imageAlt: "A plate of carbonara pasta.",
             },
             {
               name: "Tomato Basil",
               price: 13.99,
               description: "A classic tomato basil spaghetti.",
+              imageSrc: "/tomato-pasta.jpg",
+              imageAlt: "A plate of tomato basil pasta.",
             },
           ]}
         />
@@ -65,18 +77,18 @@ function MenuCategory({ title, items }) {
   );
 }
 
-function MenuItem({ name, price, description }) {
+function MenuItem({ name, price, description, imageSrc, imageAlt }) {
   return (
     <div className="flex gap-2 w-full max-w-sm mx-auto items-center justify-center rounded-md">
       <img
-        src="/pizza.jpg"
-        className="w-1/3 rounded-md shadow-md"
-        alt="pizza in front of brick oven"
+        src={imageSrc || "/pizza.jpg"}
+        className="w-20 h-20 object-cover rounded-md shadow-md"
+        alt={imageAlt || "pizza in front of brick oven"}
       />
       <div className="flex flex-col w-2/3">
         <h3 className="text-xl font-bold">{name}</h3>
-        <p className="text-base font-light">{description}</p>
-        <p className="text-base font-light">{price}</p>
+        <p className="text-sm font-light">{description}</p>
+        <p className="text-lg font-normal">{price}</p>
       </div>
     </div>
   );

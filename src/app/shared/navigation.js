@@ -34,7 +34,7 @@ export default function Navigation() {
       <nav
         className={`md:container flex items-center w-full mx-auto p-4 py-5 justify-between`}
       >
-        <img src="logo.webp" className="h-8 w-auto m-2 flex" />
+        <img src="logo.webp" alt="dummy 'rolling rough' pizza logo" className="h-8 w-auto m-2 flex" />
         <button
           aria-label="navigation menu"
           onClick={toggleMenu}

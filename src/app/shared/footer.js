@@ -16,13 +16,13 @@ export default function Footer() {
         <div className="w-fit flex justify-start flex-col items-start gap-2">
           <h3 className="text-base">Follow Us</h3>
           <div className="flex gap-4">
-            <Link href="#">
+            <Link href="#" aria-label="dummy instagram link">
               <FontAwesomeIcon icon={faInstagram} className="text-hover" />
             </Link>
-            <Link href="#">
+            <Link href="#" aria-label="dummy facebook link">
               <FontAwesomeIcon icon={faFacebook} className="text-hover" />
             </Link>
-            <Link href="#">
+            <Link href="#" aria-label="dummy twitter link">
               <FontAwesomeIcon icon={faX} className="text-hover" />
             </Link>
           </div>
