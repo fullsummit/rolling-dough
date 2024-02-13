@@ -10,8 +10,8 @@ config.autoAddCss = false;
 const mainFont = Advent_Pro({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Rolling Dough",
-  description: "Your favorite pizza place. Mockup website for a pizza place.",
+  title: "DEMO - Rolling Dough",
+  description: "DEMO: Pizza Place Website by Full Summit",
   "apple-mobile-web-app-status-bar-style": "black-translucent",
   "apple-mobile-web-app-capable": "yes",
   "theme-color": "#27272a",

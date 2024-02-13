@@ -14,21 +14,21 @@ export default function Menu() {
               name: "Margherita",
               price: 9.99,
               description: "A traditional margherita pizza.",
-              imageSrc: "/margherita-pizza.jpg",
+              imageSrc: "/optimized/margherita-pizza-320px.jpg",
               imageAlt: "A margherita pizza.",
             },
             {
               name: "Pepperoni",
               price: 11.99,
               description: "A classic pepperoni pizza.",
-              imageSrc: "/pepperoni-pizza.jpg",
+              imageSrc: "/optimized/pepperoni-pizza-320px.jpg",
               imageAlt: "A pepperoni pizza.",
             },
             {
               name: "Supreme",
               price: 13.99,
               description: "A classic supreme pizza.",
-              imageSrc: "/supreme-pizza.jpg",
+              imageSrc: "/optimized/supreme-pizza-320px.jpg",
               imageAlt: "A supreme pizza with pepperoni, sausage, and peppers.",
             },
           ]}
@@ -40,21 +40,21 @@ export default function Menu() {
               name: "Alfredo",
               price: 9.99,
               description: "A traditional Alfredo.",
-              imageSrc: "/alfredo-pasta.jpg",
+              imageSrc: "/optimized/alfredo-pasta-320px.jpg",
               imageAlt: "A plate of alfredo pasta.",
             },
             {
               name: "Carbonara",
               price: 11.99,
               description: "A classic carbonary.",
-              imageSrc: "/carbonara-pasta.jpg",
+              imageSrc: "/optimized/carbonara-pasta-320px.jpg",
               imageAlt: "A plate of carbonara pasta.",
             },
             {
               name: "Tomato Basil",
               price: 13.99,
               description: "A classic tomato basil spaghetti.",
-              imageSrc: "/tomato-pasta.jpg",
+              imageSrc: "/optimized/tomato-pasta-320px.jpg",
               imageAlt: "A plate of tomato basil pasta.",
             },
           ]}
@@ -81,7 +81,7 @@ function MenuItem({ name, price, description, imageSrc, imageAlt }) {
   return (
     <div className="flex gap-2 w-full max-w-sm mx-auto items-center justify-center rounded-md">
       <img
-        src={imageSrc || "/pizza.jpg"}
+        src={imageSrc || "/tomato-pasta-320px.jpg"}
         className="w-20 h-20 object-cover rounded-md shadow-md"
         alt={imageAlt || "pizza in front of brick oven"}
       />
