@@ -9,9 +9,7 @@ export default function Footer() {
   return (
     <footer className="text-black bg-white p-4 py-6 w-full shadow-blue-600">
       <div className="container mx-auto flex flex-col flex-wrap justify-start lg:flex-row lg:justify-between items-center">
-        <div className="flex flex-col items-center md:items-start mb-4 md:mb-0 gap-1">
-          <span>Rolling Dough</span>
-        </div>
+      <img src={`${process.env.NEXT_PUBLIC_BASEPATH}/optimized/logo-320px.webp`} alt="dummy 'rolling rough' pizza logo" className="h-6 w-auto m-2 flex" />
         <hr className="w-1/3 border-zinc-700 flex my-4 lg:hidden" />
         <div className="w-fit flex justify-start flex-col items-start gap-2">
           <h3 className="text-base">Follow Us</h3>

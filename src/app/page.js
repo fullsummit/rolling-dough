@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex my-6 shadow-lg max-w-lg shadow-zinc-600 rounded-md flex-col relative w-92 h-92 bg-black overflow-hidden">
-          <img src="/optimized/pizza-640px.jpg" alt="pizza in front of brick oven" srcSet="/optimized/pizza-320px.jpg 320w, /optimized/pizza-640px.jpg 640w, /optimized/pizza-1024px.jpg 1024w" />
+          <img src={`${process.env.NEXT_PUBLIC_BASEPATH}/optimized/pizza-640px.jpg`} alt="pizza in front of brick oven" srcSet={`${process.env.NEXT_PUBLIC_BASEPATH}/optimized/pizza-320px.jpg 320w, ${process.env.NEXT_PUBLIC_BASEPATH}/optimized/pizza-640px.jpg 640w, ${process.env.NEXT_PUBLIC_BASEPATH}/optimized/pizza-1024px.jpg 1024w`} />
           <div className="bg-red-600 text-white text-7xl p-4 font-extrabold flex">
             <div className="flex-col flex w-1/3 justify-center">
               <span className="text-3xl sm:text-5xl"><span className="font-light text-sm sm:text-3xl">$</span>9.99</span>

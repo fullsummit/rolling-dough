@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Menu() {
   return (
-    <div className="flex flex-col gap-4 w-full max-w-7xl mx-auto p-4 items-center justify-center">
+    <div className="flex flex-col gap-4 w-full max-w-2xl mx-auto p-4 items-center justify-center">
       <h1 className="text-4xl font-bold">Menu</h1>
       <p className="text-2xl font-light">Check out our menu. <Link className="text-red-600 font-semibold" href={'/login'}>Sign in</Link>{" "}or{" "}<Link className="text-red-600 font-semibold" href={"/login"}>Sign up</Link> to order.</p>
       <div className="flex flex-col sm:flex-row gap-2 w-full">
@@ -79,9 +79,9 @@ function MenuCategory({ title, items }) {
 
 function MenuItem({ name, price, description, imageSrc, imageAlt }) {
   return (
-    <div className="flex gap-2 w-full max-w-sm mx-auto items-center justify-center rounded-md">
+    <div className="flex gap-2 w-full max-w-sm pr-6 mx-auto items-center justify-center rounded-md hover:border-gray-200 hover:shadow hover:bg-gray-50 border border-transparent">
       <img
-        src={imageSrc || "/tomato-pasta-320px.jpg"}
+        src={`${process.env.NEXT_PUBLIC_BASEPATH + imageSrc || "/tomato-pasta-320px.jpg"}`}
         className="w-20 h-20 object-cover rounded-md shadow-md"
         alt={imageAlt || "pizza in front of brick oven"}
       />
